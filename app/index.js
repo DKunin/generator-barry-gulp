@@ -2,6 +2,7 @@
 var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
+var _ = require('lodash');
 
 
 var GeneratorJaderGenerator = module.exports = function GeneratorJaderGenerator(args, options, config) {
@@ -108,11 +109,16 @@ GeneratorJaderGenerator.prototype.app = function app() {
   
   //Styles
   if(this.stylusModule) {
-    this.template('styles/_style.styl', 'app/styles/style.styl');
-    this.template('styles/_mixins.styl', 'app/styles/_mixins.styl');
-    this.template('styles/_pure.styl', 'app/styles/_pure.styl');
-    this.template('styles/_pure.css', 'app/styles/_pure.css');
-    this.template('styles/_color.styl', 'app/styles/_color.styl');
+
+    var files = ['style', '_mixins', '_color', '_functions' ,'_grid', '_jeet','_settings']
+    _.each(files, function(d){
+      this.template('styles/'+d+'.styl', 'app/styles/'+d+'.styl');
+    }.bind(this))
+    // this.template('styles/style.styl', 'app/styles/style.styl');
+    // this.template('styles/_mixins.styl', 'app/styles/_mixins.styl');
+    // this.template('styles/_color.styl', 'app/styles/_color.styl');
+    // this.template('styles/_functions.styl', 'app/styles/_functions.styl');
+    // this.template('styles/_functions.styl', 'app/styles/_functions.styl');
   } else {
     this.template('styles/_pure.css', 'app/styles/_pure.css');
     this.template('style.css', 'app/styles/style.css');
@@ -122,7 +128,7 @@ GeneratorJaderGenerator.prototype.app = function app() {
   this.template('_main.js', 'app/js/main.js');
   
   //DevFiles
-  this.template('Gruntfile.js', 'Gruntfile.js');
+  this.template('Gulpfile.js', 'Gulpfile.js');
   this.template('_package.json', 'package.json');
   this.template('_bower.json', 'bower.json');
   

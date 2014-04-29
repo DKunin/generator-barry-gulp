@@ -1,7 +1,7 @@
 {
-  "name": "generator-barry",
+  "name": "generator-barry-gulp",
   "version": "0.1.11",
-  "description": "A generator for Yeoman. Generator that gives you ability to rapidly scaffold a front-end development app. With Jade and Stylus.",
+  "description": "A generator for Yeoman. Generator that gives you ability to rapidly scaffold a front-end development app. With Jade and Stylus. Now with Gulp Magic.",
   "keywords": [
     "yeoman-generator",
     "barry",
@@ -11,13 +11,14 @@
     "fast",
     "flash",
     "jade",
+    "gulp",
     "stylus",
     "connect",
     "awesome",
     "livereload"
   ],
-  "homepage": "https://github.com/DKunin/generator-barry",
-  "bugs": "https://github.com/DKunin/generator-barry/issues",
+  "homepage": "https://github.com/DKunin/generator-barry-gulp",
+  "bugs": "https://github.com/DKunin/generator-barry-gulp/issues",
   "author": {
     "name": "Dmitri Kunin",
     "email": "info@dkunin.ru",
@@ -26,14 +27,14 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/dkunin/generator-barry.git"
+    "url": "git://github.com/dkunin/generator-barry-gulp.git"
   },
   "dependencies": {
-    "yeoman-generator": ">=0.16.0"
+    "yeoman-generator": ">=0.16.0",
+    "lodash": "latest"
   },
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-bumpup": ">=0.5.2"
+    
   },
   "peerDependencies": {
     "yo": ">=1.0.0-rc.1"

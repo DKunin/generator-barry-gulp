@@ -1,4 +1,4 @@
-# generator-barry [![NPM version](https://badge.fury.io/js/generator-barry.png)](http://badge.fury.io/js/generator-barry) [![NPM version](https://david-dm.org/dkunin/generator-barry.png)](https://david-dm.org/dkunin/generator-barry.png)
+# generator-barry-gulp [![NPM version](https://badge.fury.io/js/generator-barry.png)](http://badge.fury.io/js/generator-barry-gulp) [![NPM version](https://david-dm.org/dkunin/generator-barry-gulp.png)](https://david-dm.org/dkunin/generator-barry-gulp.png)
 
 A generator for [Yeoman](http://yeoman.io).
 
@@ -25,9 +25,9 @@ Currently includes the ability to choose to generate simple app structure with:
 ##Usage 
 Run command to serve static files/or live generation of jade/stylus
       
-      grunt 
+      gulp 
       // or
-      grunt serve
+      gulp serve
 
 ##To-do
 - add HAML
@@ -35,6 +35,9 @@ Run command to serve static files/or live generation of jade/stylus
 - add image optimization
 
 #Changelog
+
+##0.1.11
+- Update for gulp goodness, probably would drop the grunt version
 
 ##0.1.10
 - Updated dependencies
