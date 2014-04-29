@@ -14,7 +14,7 @@ Currently includes the ability to choose to generate simple app structure with:
 - Livereloading
 
 ##Install 
-[![NPM](https://nodei.co/npm/generator-barry.png?downloads=true)](https://nodei.co/npm/generator-barry/)
+[![NPM](https://nodei.co/npm/generator-barry-gulp.png?downloads=true)](https://nodei.co/npm/generator-barry-gulp/)
 
       npm install -g generator-barry
 
@@ -36,7 +36,10 @@ Run command to serve static files/or live generation of jade/stylus
 
 #Changelog
 
-##0.1.11
+##0.2.1
+- Added [Jeet](http://jeet.gs/)
+
+##0.2
 - Update for gulp goodness, probably would drop the grunt version
 
 ##0.1.10
