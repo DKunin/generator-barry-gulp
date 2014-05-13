@@ -7,7 +7,7 @@ var connect = require('gulp-connect');
 
 
 var paths = {  
-  scripts: './app/js/jsx/*.jsx',
+  scripts: './app/js/*.js',
   views: './app/views/**/*.jade',
   styles: './app/styles/*.styl'
 };
@@ -19,16 +19,19 @@ gulp.task('jade', function() {
     basedir:'./app/views'
   }))
   .pipe(gulp.dest('./build'))
-  .pipe(connect.reload());
-  //Cleaning up
-  // gulp.src('./build/layouts', {read: false})
-  //   .pipe(clean());    
+  .pipe(connect.reload());   
 });
 
 gulp.task('compress', function() {
   gulp.src('lib/*.js')
     .pipe(uglify({outSourceMap: true}))
     .pipe(gulp.dest('dist'))
+});
+
+gulp.task('scripts', function() {
+  gulp.src('js/*.js')
+    .pipe(uglify({outSourceMap: true}))
+    .pipe(gulp.dest('build'))
 });
 
 gulp.task('stylus', function () {
@@ -65,5 +68,6 @@ gulp.task('reload', function(){
 gulp.task('watch', function() {
   gulp.watch(paths.styles, ['stylus']);
   gulp.watch(paths.views, ['jade']);
+  gulp.watch(paths.scripts, ['scripts']);
 });
 

@@ -36,6 +36,9 @@ Run command to serve static files/or live generation of jade/stylus
 
 #Changelog
 
+##0.2.2
+- Bug - oversaw react plugin
+
 ##0.2.1
 - Added [Jeet](http://jeet.gs/)
 
