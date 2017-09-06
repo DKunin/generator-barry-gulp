@@ -1,3 +1,4 @@
+# [NO LONGER MAINTAINER]
 # generator-barry-gulp [![NPM version](https://badge.fury.io/js/generator-barry.png)](http://badge.fury.io/js/generator-barry-gulp) [![NPM version](https://david-dm.org/dkunin/generator-barry-gulp.png)](https://david-dm.org/dkunin/generator-barry-gulp.png)
 
 A generator for [Yeoman](http://yeoman.io).
